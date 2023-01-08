@@ -1,12 +1,8 @@
 import React from "react";
-import Routees from ".src/components/Routes";
+import Routees from "./Routes";
 
 function App() {
-  return (
-    <div className="App">
-      <Routees />
-    </div>
-  );
+  return <div className="App">{<Routees />}</div>;
 }
 
 export default App;

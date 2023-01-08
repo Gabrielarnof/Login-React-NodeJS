@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from ".src/pages/App";
+import App from "./pages/App";
 import { BrowserRouter as Router } from "react-router-dom";
-import { GlobalStyle } from ".src/pages/reset.css.js";
+import { GlobalStyle } from "./pages/reset.css.js";
 
 ReactDOM.render(
   <Router>
