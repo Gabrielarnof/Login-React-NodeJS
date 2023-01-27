@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const StyledInput = styled.input`
+text-align:center
 width: 100%
 outline:none;
 padding: 8px 16px;

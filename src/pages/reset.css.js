@@ -11,8 +11,10 @@ export const GlobalStyle = createGlobalStyle`
 }
 
   body {
-    font-size: 16px;
+    font-size: 20px;
     font-family:  'Helvetica Neue',    sans-serif;
     color: #333;
+    background: #9df9ef
+
       }
 `;

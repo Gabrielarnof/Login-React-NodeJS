@@ -1,32 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { EntryPage, PageHeader } from "./style";
 import EntryCard from "../components/EntryCard";
 import InputGroup from "../components/InputGroup";
-import Input from "../components/Input";
+// import Input from "../components/Input";
 import Button from "../components/Button";
 
 function Signup() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // send a post request to the backend with name, email, and password
+    // using axios or fetch
+  };
   return (
     <EntryPage>
-      <PageHeader to="/">AWESOME LOGO</PageHeader>
+      <PageHeader to="/">My site </PageHeader>
       <EntryCard>
+        <form onSubmit={handleSubmit}></form>
         <h2>Sign up</h2>
         <form onSubmit={(e) => e.preventDefault()}>
           <InputGroup>
-            <label htmlFor="signup-name">Full Name</label>
-            <Input type="text" placeholder="John Doe" id="signup-name" />
+            <label htmlFor="signup-name">First Name</label>
+
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </InputGroup>
           <InputGroup>
+            <label htmlFor="signup-name">Last Name</label>
+
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </InputGroup>
+
+          <InputGroup>
             <label htmlFor="signup-email">Email Address</label>
-            <Input type="text" placeholder="name@email.com" id="signup.email" />
+
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </InputGroup>
           <InputGroup>
             <label htmlFor="signup-password">Password</label>
-            <Input
+            <input
               type="password"
-              placeholder="Password"
-              id="signup-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </InputGroup>
           <Button type="submit" full>
